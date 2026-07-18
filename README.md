@@ -45,3 +45,7 @@ TripWise is a smart travel planner that helps users create personalized travel i
 5. Start the development server: npm run dev
 6. Open the local URL displayed in the terminal.
 
+## Live Demo
+
+https://tripwise-pooja.vercel.app
+
