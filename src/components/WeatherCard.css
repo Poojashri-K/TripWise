@@ -1,0 +1,58 @@
+.weather-card {
+  min-width: 200px;
+  scroll-snap-align: start;
+  background: var(--white);
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+  border-top: 4px solid var(--teal);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.weather-card.is-indoor {
+  border-top-color: var(--coral);
+}
+
+.weather-card-top {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--slate-soft);
+  margin-bottom: 10px;
+}
+
+.weather-icon {
+  color: var(--teal);
+  margin: 6px auto 8px;
+}
+
+.is-indoor .weather-icon {
+  color: var(--coral);
+}
+
+.weather-condition {
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.weather-temp {
+  font-family: var(--font-mono);
+  color: var(--slate-soft);
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+}
+
+.weather-suggestion {
+  font-size: 0.8rem;
+  color: var(--slate-soft);
+  line-height: 1.5;
+  margin: 0;
+}

@@ -1,0 +1,121 @@
+.itinerary-row {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+.itinerary-node {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* The dashed "route line" threading through each day — the page's signature element */
+.itinerary-node::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  bottom: -32px;
+  left: 50%;
+  width: 0;
+  border-left: 2.5px dashed var(--sand-dark);
+}
+
+.itinerary-row:last-child .itinerary-node::before {
+  display: none;
+}
+
+.itinerary-node-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 1;
+  box-shadow: 0 0 0 5px var(--paper);
+}
+
+.itinerary-card {
+  padding: 22px 24px;
+  margin-bottom: 32px;
+}
+
+.itinerary-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--sand);
+  padding-bottom: 12px;
+}
+
+.itinerary-card-head h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.itinerary-date {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--teal-deep);
+  background: rgba(31, 111, 120, 0.1);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.itinerary-activities {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.itinerary-activities li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.itinerary-activities svg {
+  color: var(--coral);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.itinerary-slot {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--slate-soft);
+  font-weight: 600;
+}
+
+.itinerary-activities p {
+  margin: 2px 0 0;
+  color: var(--slate);
+  font-weight: 500;
+}
+
+@media (max-width: 560px) {
+  .itinerary-row {
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+  }
+  .itinerary-node-dot {
+    width: 32px;
+    height: 32px;
+    font-size: 0.78rem;
+  }
+  .itinerary-node::before {
+    top: 32px;
+  }
+}

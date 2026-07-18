@@ -1,0 +1,69 @@
+.budget-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.budget-row {
+  display: flex;
+  gap: 14px;
+}
+
+.budget-row-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.budget-row-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.budget-row-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.budget-row-label {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+.budget-row-percent {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--slate-soft);
+}
+
+.budget-row-bar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--sand);
+  overflow: hidden;
+}
+
+.budget-row-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.budget-row-amounts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--slate-soft);
+}
+
+.budget-row-amounts .is-over {
+  color: var(--danger);
+  font-weight: 700;
+}

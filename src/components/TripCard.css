@@ -1,0 +1,38 @@
+.trip-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.trip-card-header h3 {
+  margin-top: 6px;
+  font-size: 1.35rem;
+}
+
+.trip-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trip-card-meta li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  color: var(--slate-soft);
+}
+
+.trip-card-meta svg {
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.trip-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 6px;
+}

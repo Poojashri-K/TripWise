@@ -1,0 +1,119 @@
+.packing-progress {
+  margin-bottom: 24px;
+}
+
+.packing-progress-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.packing-progress-track {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--sand);
+  overflow: hidden;
+}
+
+.packing-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal), var(--coral));
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.packing-add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.packing-add-form input {
+  flex: 2;
+  min-width: 180px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--sand-dark);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  background: var(--paper);
+}
+
+.packing-add-form select {
+  flex: 1;
+  min-width: 140px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--sand-dark);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  background: var(--paper);
+}
+
+.packing-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 28px;
+}
+
+.packing-category h4 {
+  font-size: 0.95rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--sand);
+  margin-bottom: 12px;
+}
+
+.packing-category ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.packing-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.packing-check input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.packing-check-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--sand-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.packing-check.is-checked .packing-check-box {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.packing-check-label {
+  font-size: 0.9rem;
+  color: var(--slate);
+}
+
+.packing-check.is-checked .packing-check-label {
+  color: var(--slate-soft);
+  text-decoration: line-through;
+}
+
+.packing-check input:focus-visible + .packing-check-box {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}

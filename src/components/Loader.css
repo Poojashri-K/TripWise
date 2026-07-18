@@ -1,0 +1,19 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 20px;
+  color: var(--slate-soft);
+  font-weight: 600;
+}
+
+.loader-spin {
+  color: var(--coral);
+  animation: loader-rotate 1.4s linear infinite;
+}
+
+@keyframes loader-rotate {
+  to { transform: rotate(360deg); }
+}
